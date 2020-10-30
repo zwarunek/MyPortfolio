@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, HostListener} from '@angular/core';
+import {ActivatedRoute, Router} from "@angular/router";
+import {MenuItem} from "primeng/api";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'MyPortfolio';
+
+  header: HTMLDivElement;
+
+  constructor(router: Router) {
+
+  }
+
+  @HostListener("window:scroll", [])
+  onWindowScroll() {
+    // this.currentSectionName = this.getCurrentSectionName();
+  }
 }
+

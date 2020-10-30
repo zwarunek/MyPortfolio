@@ -1,0 +1,14 @@
+
+  <div style="padding: 10px">
+    <div style="text-align: center;">
+      <span class="header-text">Zachary Warunek</span>
+    </div>
+    <div style="margin: 10px">
+      <p-tabMenu  #menu  [model]="menuItems" (click)="menuChange(menu.activeItem)" [activeItem]="activeMenuItem">
+        <ng-template pTemplate="item" let-item>
+          <fa-icon [icon]="item.icon" style="color: #367bff"></fa-icon>
+          <span class="p-mx-2">{{item.label}}</span>
+        </ng-template>
+      </p-tabMenu>
+    </div>
+  </div>

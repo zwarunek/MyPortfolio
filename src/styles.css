@@ -1,1 +1,94 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~primeng/resources/themes/bootstrap4-light-blue/theme.css";
+@import "~primeicons/primeicons.css";
+@import "~primeng/resources/primeng.css";
+
+@font-face {
+  font-family: montserrat-header;
+  src: local("Montserrat"), url("./assets/fonts/Montserrat/Montserrat-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: montserrat-large;
+  src: local("Montserrat"), url("./assets/fonts/Montserrat/Montserrat-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: montserrat-regular;
+  src: local("Montserrat"), url("./assets/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+}
+
+.header-text{
+  font-size: 50px;
+  font-family: montserrat-header;
+  color: #367bff;
+  caret-color: transparent;
+}
+.title-text{
+  font-size: 30px;
+  font-family: montserrat-large;
+  color: #606060;
+  text-align: center;
+  border-bottom: 1px solid #367bff;
+  caret-color: transparent;
+}
+.regular-text{
+  font-size: 20px;
+  font-family: montserrat-regular;
+  color: #474747;
+  caret-color: transparent;
+}
+
+.main-content{
+  padding: 58px 50px 50px;
+}
+@media screen and (min-width: 536px){
+  .background-img {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    background-size: 120%;
+    height: 120px;
+    background-position-y: 0px
+  }
+}
+@media screen and (min-width: 768px){
+  .background-img {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    background-size: 100%;
+    height: 200px;
+    background-position-y: 0px
+  }
+}
+@media screen and (min-width: 992px){
+  .background-img {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    background-size: 70%;
+    height: 250px;
+    background-position-y: 80px
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .background-img {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    background-size: 70%;
+    height: 250px;
+    background-position-y: 0px
+  }
+}
+
+@media screen and (min-width: 1500px){
+  .background-img {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    background-size: 70%;
+    height: 250px;
+    background-position-y: -100px
+  }
+}
