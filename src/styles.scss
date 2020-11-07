@@ -15,11 +15,62 @@
   font-family: montserrat-regular;
   src: local("Montserrat"), url("./assets/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
 }
+.p-inputtext:enabled {
+  &:focus {
+    box-shadow: none;
+    border-color: gray;
+  }
+}
+a:-webkit-any-link {
+  color: #495057;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.project-card {
+  cursor: pointer;
+  border-radius: 20px;
+  margin: .5rem
+}
+.p-card .p-card-content {
+  padding: 0 0;
+}
+.p-card {
+  border-radius: 20px;
+  height: 100%;
+}
+.project-card:hover {
+  cursor: pointer;
+  box-shadow: 0 5px 5px 0px rgba(0,0,0,.2), 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
 
+}
+.p-component {
+   font-family:  montserrat-regular, montserrat-large, montserrat-header, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+   font-size: 1rem;
+   font-weight: normal;
+    color: #474747
+ }
+.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-icon {
+  color: #007bff;
+  margin-right: 0.5rem;
+}
+.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link:not(.p-disabled):hover .p-menuitem-icon {
+  color: #0061d0;
+}
+.p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link:not(.p-disabled):focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: none;
+}
+.fa-blue{
+  color: #007bff
+}
+.fa-grey{
+  color: #007bff
+}
 .header-text{
   font-size: 50px;
   font-family: montserrat-header;
-  color: #367bff;
+  color: #007bff;
   caret-color: transparent;
 }
 .title-text{
@@ -27,11 +78,17 @@
   font-family: montserrat-large;
   color: #606060;
   text-align: center;
-  border-bottom: 1px solid #367bff;
+  border-bottom: 1px solid #007bff;
   caret-color: transparent;
 }
 .regular-text{
   font-size: 20px;
+  font-family: montserrat-regular;
+  color: #474747;
+  caret-color: transparent;
+}
+.small-text{
+  font-size: 15px;
   font-family: montserrat-regular;
   color: #474747;
   caret-color: transparent;
@@ -49,6 +106,9 @@
     height: 120px;
     background-position-y: 0px
   }
+  .project-card {
+    width: 45%;
+  }
 }
 @media screen and (min-width: 768px){
   .background-img {
@@ -58,6 +118,9 @@
     background-size: 100%;
     height: 200px;
     background-position-y: 0px
+  }
+  .project-card {
+    width: 30%;
   }
 }
 @media screen and (min-width: 992px){
@@ -69,6 +132,9 @@
     height: 250px;
     background-position-y: 80px
   }
+  .project-card {
+    width: 45%;
+  }
 }
 
 @media screen and (min-width: 1200px){
@@ -79,6 +145,9 @@
     background-size: 70%;
     height: 250px;
     background-position-y: 0px
+  }
+  .project-card {
+    width: 30%;
   }
 }
 
@@ -92,3 +161,4 @@
     background-position-y: -100px
   }
 }
+

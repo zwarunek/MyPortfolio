@@ -1,0 +1,7 @@
+{
+  "/sendmail": {
+  "target": "http://api.zacharywarunek.com",
+    "secure": false,
+    "changeOrigin": true
+}
+}

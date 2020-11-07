@@ -4,11 +4,15 @@
       <span class="header-text">Zachary Warunek</span>
     </div>
     <div style="margin: 10px">
-      <p-tabMenu  #menu  [model]="menuItems" (click)="menuChange(menu.activeItem)" [activeItem]="activeMenuItem">
+      <p-tabMenu  #tabMenu [model]="menuItems" (click)="menuChange(tabMenu.activeItem)" [activeItem]="activeMenuItem">
         <ng-template pTemplate="item" let-item>
-          <fa-icon [icon]="item.icon" style="color: #367bff"></fa-icon>
-          <span class="p-mx-2">{{item.label}}</span>
+          <fa-icon class="fa-blue" [icon]="item.icon"></fa-icon>
+          <span #span (mouseenter)="entered($event, span, menu)" *ngIf="item.label != 'Resume'" class="p-mx-2">{{item.label}}</span>
+          <a *ngIf="item.label == 'Resume'" href="/assets/Resume%20Summer%202020.pdf" class="p-mx-2">{{item.label}}</a>
+          <fa-icon class="p-menuitem-icon" *ngIf="item.items != null" [icon]="dropdownIcon"></fa-icon>
         </ng-template>
       </p-tabMenu>
     </div>
   </div>
+
+  <p-menu #menu [popup]="true" [model]="projectItems" (click)="navigate($event)"></p-menu>
