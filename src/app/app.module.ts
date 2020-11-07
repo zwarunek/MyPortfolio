@@ -30,6 +30,7 @@ import {WebRequestService} from "./web-request.service";
 import {CardModule} from 'primeng/card';
 import { TimemachineComponent } from './projects/timemachine/timemachine.component';
 import { FordsearchengineComponent } from './projects/fordsearchengine/fordsearchengine.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -41,7 +42,8 @@ import { FordsearchengineComponent } from './projects/fordsearchengine/fordsearc
     ProjectsComponent,
     ContactComponent,
     TimemachineComponent,
-    FordsearchengineComponent
+    FordsearchengineComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

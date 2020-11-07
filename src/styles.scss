@@ -67,6 +67,22 @@ a:-webkit-any-link {
 .fa-grey{
   color: #007bff
 }
+.fa-footer{
+  color: #bebebe;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  transition: all .2s ease;
+}
+.fa-footer:hover{
+  color: #a2a2a2;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  transition: all .2s ease;
+}
 .header-text{
   font-size: 50px;
   font-family: montserrat-header;
@@ -96,6 +112,10 @@ a:-webkit-any-link {
 
 .main-content{
   padding: 58px 50px 50px;
+}
+.footer-content{
+  padding: 10px 50px;
+  border-top: #bebebe 1px solid;
 }
 @media screen and (min-width: 536px){
   .background-img {

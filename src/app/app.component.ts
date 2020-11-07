@@ -11,6 +11,7 @@ import {MenuItem} from "primeng/api";
 export class AppComponent {
 
   header: HTMLDivElement;
+  footer: HTMLDivElement;
 
   constructor(router: Router) {
 

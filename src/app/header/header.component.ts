@@ -28,10 +28,10 @@ export class HeaderComponent implements OnInit {
       {label: 'Contact', icon: faComments, routerLink: ['contact']}
     ];
     this.projectItems = [
-      {label: 'Time Machine', routerLink: ['projects/timemachine']},
-      {label: 'AI Driving Game'},
-      {label: 'AI Flappy Bird'},
-      {label: 'Ford Search Engine', routerLink: ['projects/fordsearchengine']}
+      // {label: 'Time Machine', routerLink: ['projects/timemachine']},
+      // {label: 'AI Driving Game'},
+      // {label: 'AI Flappy Bird'},
+      // {label: 'Ford Search Engine', routerLink: ['projects/fordsearchengine']}
     ];
     if(window.location.href.endsWith("/"))
       this.activeMenuItem = this.menuItems[0];
