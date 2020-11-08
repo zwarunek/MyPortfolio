@@ -31,6 +31,7 @@ import {CardModule} from 'primeng/card';
 import { TimemachineComponent } from './projects/timemachine/timemachine.component';
 import { FordsearchengineComponent } from './projects/fordsearchengine/fordsearchengine.component';
 import { FooterComponent } from './footer/footer.component';
+import { FlappybirdComponent } from './projects/flappybird/flappybird.component';
 
 
 
@@ -43,7 +44,8 @@ import { FooterComponent } from './footer/footer.component';
     ContactComponent,
     TimemachineComponent,
     FordsearchengineComponent,
-    FooterComponent
+    FooterComponent,
+    FlappybirdComponent
   ],
   imports: [
     BrowserModule,

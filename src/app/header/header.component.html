@@ -4,7 +4,7 @@
       <span class="header-text">Zachary Warunek</span>
     </div>
     <div style="margin: 10px">
-      <p-tabMenu  #tabMenu [model]="menuItems" (click)="menuChange(tabMenu.activeItem)" [activeItem]="activeMenuItem">
+      <p-tabMenu  #tabMenu [model]="menuItems" [activeItem]="activeMenuItem">
         <ng-template pTemplate="item" let-item>
           <fa-icon class="fa-blue" [icon]="item.icon"></fa-icon>
           <span #span (mouseenter)="entered($event, span, menu)" *ngIf="item.label != 'Resume'" class="p-mx-2">{{item.label}}</span>

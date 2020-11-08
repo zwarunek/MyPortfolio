@@ -28,14 +28,16 @@ a:-webkit-any-link {
 }
 .project-card {
   cursor: pointer;
-  border-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   margin: .5rem
 }
 .p-card .p-card-content {
   padding: 0 0;
 }
 .p-card {
-  border-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   height: 100%;
 }
 .project-card:hover {
