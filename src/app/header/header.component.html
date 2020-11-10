@@ -1,18 +1,22 @@
 
-  <div style="padding: 10px">
+  <div  class="sticky-header">
     <div style="text-align: center;">
       <span class="header-text">Zachary Warunek</span>
     </div>
-    <div style="margin: 10px">
-      <p-tabMenu  #tabMenu [model]="menuItems" [activeItem]="activeMenuItem">
+    <div style="margin: 10px; z-index: 10">
+      <p-tabMenu class="menu-bar" #tabMenu [model]="menuItems" [activeItem]="activeMenuItem">
         <ng-template pTemplate="item" let-item>
           <fa-icon class="fa-blue" [icon]="item.icon"></fa-icon>
           <span #span (mouseenter)="entered($event, span, menu)" *ngIf="item.label != 'Resume'" class="p-mx-2">{{item.label}}</span>
-          <a *ngIf="item.label == 'Resume'" href="/assets/Resume%20Summer%202020.pdf" target="_blank" class="p-mx-2">{{item.label}}</a>
+          <a *ngIf="item.label == 'Resume'" href="/assets/Resume%20Summer%202020.pdf" target="_blank" class="p-mx-2 in-text-link">{{item.label}}</a>
           <fa-icon class="p-menuitem-icon" *ngIf="item.items != null" [icon]="dropdownIcon"></fa-icon>
         </ng-template>
       </p-tabMenu>
+      <button pButton class="hamburger-btn" label=" " style="background-color: white; border-color: #bebebe"><fa-icon class="mobile-menu-icon fa-blue" size="2x" (click)="openNav()" [icon]="mobileMenuIcon"></fa-icon></button>
+    </div>
+    <div id="sideMenu" #sideMenu class="side-menu"  style="position: fixed; top: 0; left: 0;width: 250px; height: 100%; background-color: white">
+
     </div>
   </div>
 
-  <p-menu #menu [popup]="true" [model]="projectItems" (click)="navigate($event)"></p-menu>
+  <p-menu #menu [popup]="true"  [model]="projectItems" (click)="navigate($event)"></p-menu>
