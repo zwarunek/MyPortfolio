@@ -25,7 +25,7 @@ html,body{
   }
 }
 .in-text-link {
-  color: #495057;
+  color: #474747;
   cursor: pointer;
   text-decoration: underline;
 }
@@ -52,7 +52,7 @@ html,body{
    font-family:  montserrat-regular, montserrat-large, montserrat-header, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
    font-size: 1rem;
    font-weight: normal;
-    color: #474747
+   color: #474747
  }
 .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-icon {
   color: #007bff;
@@ -75,7 +75,7 @@ html,body{
   color: #007bff
 }
 .fa-grey{
-  color: #007bff
+  color: #a2a2a2
 }
 .fa-footer{
   color: #bebebe;
@@ -98,6 +98,7 @@ html,body{
   font-family: montserrat-header;
   color: #007bff;
   caret-color: transparent;
+  cursor: pointer;
 }
 .title-text{
   font-size: 30px;
@@ -106,6 +107,7 @@ html,body{
   text-align: center;
   border-bottom: 1px solid #007bff;
   caret-color: transparent;
+  width: 66.6667%;
 }
 .regular-text{
   font-size: 20px;
@@ -122,12 +124,54 @@ html,body{
 .hamburger-btn {
   display: none;
 }
+.navbar {
+  position: fixed;
+  padding: 10px;
+  top: 81px;
+  width: 100%;
+  background-color: white;
+  transition-duration: 0.3s;
+  transition-property: top;
+
+}
+.title {
+  text-align: center;
+  width: 100%;
+  position:fixed;
+  background-color: white;
+  padding: 10px;
+  z-index: 2;
+}
+.sticky-header {
+  position: fixed;
+  width: 100%;
+  padding: 10px;
+  top: 0;
+}
 .main-content{
   padding: 58px 50px 50px;
+  margin-top: 150px!important;
+  caret-color: transparent;
 }
 .footer-content{
   padding: 10px 50px;
   border-top: #bebebe 1px solid;
+}
+.blur {
+  background-color: rgba(0,0,0,0);
+  position: fixed;
+
+  top: 0;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1
+}
+.blur.active{
+  background-color: rgba(0,0,0,0.3);
+  z-index: 5;
+  left: 250px;
+  transition: .5s;
 }
 .side-menu {
   position: fixed;
@@ -138,7 +182,7 @@ html,body{
   //border-right: 1px solid var(--surface-d);
   padding: 1rem;
   transition: transform .4s cubic-bezier(.05,.74,.2,.99);
-  z-index: 999;
+  z-index: 3;
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
   display: none;
@@ -147,13 +191,6 @@ html,body{
   -ms-transform: translateX(0);
   transform: translateX(0);
   z-index: 0;
-}
-.sticky-header {
-  position:fixed;
-  background-color: white;
-  width: 100%;
-  top: 0;
-  padding: 10px;
 }
 .top-image {
   max-width: 100%;
@@ -164,7 +201,13 @@ html,body{
   padding-top: 50px;
   overflow: hidden;
 }
-@media screen and (min-width: 275px) and (max-width: 584px){
+span:focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: none;
+}
+
+@media screen and (max-width: 584px){
   .small-text {
     font-size: 10px;
   }
@@ -186,17 +229,41 @@ html,body{
   .menu-bar {
     display: none;
   }
-  .side-menu {
-    display: block;
-  }
   .hamburger-btn {
+    display: inherit;
+  }
+  .side-menu {
     display: block;
   }
   .top-image {
     display: none;
   }
   .top-image-container {
-    padding-top: 150px;
+    padding-top: 70px;
+  }
+  .navbar {
+    display: none;
+  }
+  .title {
+    z-index: inherit;
+  }
+}
+@media screen and (max-width: 417px){
+  .main-content{
+    margin-top: 150px!important;
+    caret-color: transparent;
+  }
+  .top-image-container {
+    display: block;
+    height: 130px;
+  }
+}
+@media screen and (min-width: 418px){
+  .project-card {
+    width: 45%;
+  }
+  .main-content{
+    margin-top: 90px!important;
   }
 }
 @media screen and (min-width: 585px){
@@ -208,12 +275,18 @@ html,body{
     height: 120px;
     background-position-y: 0
   }
+  .main-content{
+    margin-top: 150px!important;
+  }
   .top-image-container {
     display: block;
     height: 270px;
   }
   .project-card {
     width: 45%;
+  }
+  .blur {
+    display: none;
   }
 }
 @media screen and (min-width: 768px){
@@ -244,15 +317,20 @@ html,body{
   }
   .sticky-header {
     position:fixed;
-    background-color: white;
     width: 66.6667%;
     top: 0;
-    padding: 10px;
+  }
+  .navbar {
+    top: 81px;
+    width: 66.6667%;
   }
   .top-image-container {
     display: block;
     height: 400px;
     padding-top: 80px;
+  }
+  .title {
+    width: 66.6667%;
   }
   .project-card {
     width: 45%;

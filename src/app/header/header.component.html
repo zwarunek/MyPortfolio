@@ -1,22 +1,43 @@
 
-  <div  class="sticky-header">
-    <div style="text-align: center;">
-      <span class="header-text">Zachary Warunek</span>
+<!--  <div  class="sticky-header">-->
+    <div class="title p-d-flex">
+<!--      <fa-icon class="mobile-menu-icon fa-blue" size="2x" (click)="openNav()" [icon]="mobileMenuIcon"></fa-icon>-->
+        <button pButton class="hamburger-btn p-button-text p-my-auto" label=" " style="background-color: white; border-color: transparent;align-self: baseline" (click)="openNav()"><fa-icon class="mobile-menu-icon fa-blue" size="2x" [icon]="mobileMenuIcon"></fa-icon></button>
+
+      <span  class="header-text p-mx-auto" routerLink="/">Zachary Warunek</span>
     </div>
-    <div style="margin: 10px; z-index: 10">
+    <div id="navbar" class="navbar" style="z-index: 1">
       <p-tabMenu class="menu-bar" #tabMenu [model]="menuItems" [activeItem]="activeMenuItem">
         <ng-template pTemplate="item" let-item>
           <fa-icon class="fa-blue" [icon]="item.icon"></fa-icon>
           <span #span (mouseenter)="entered($event, span, menu)" *ngIf="item.label != 'Resume'" class="p-mx-2">{{item.label}}</span>
-          <a *ngIf="item.label == 'Resume'" href="/assets/Resume%20Summer%202020.pdf" target="_blank" class="p-mx-2 in-text-link">{{item.label}}</a>
+          <a *ngIf="item.label == 'Resume'" href="/assets/Resume%20Summer%202020.pdf" target="_blank" style="color: #6c757d" class="p-mx-2 in-text-link">{{item.label}}</a>
           <fa-icon class="p-menuitem-icon" *ngIf="item.items != null" [icon]="dropdownIcon"></fa-icon>
         </ng-template>
       </p-tabMenu>
-      <button pButton class="hamburger-btn" label=" " style="background-color: white; border-color: #bebebe"><fa-icon class="mobile-menu-icon fa-blue" size="2x" (click)="openNav()" [icon]="mobileMenuIcon"></fa-icon></button>
     </div>
-    <div id="sideMenu" #sideMenu class="side-menu"  style="position: fixed; top: 0; left: 0;width: 250px; height: 100%; background-color: white">
+    <div id="sideMenu" #sideMenu class="side-menu"  style="position: fixed; top: 0; left: 0;width: 250px; height: 100%; background-color: white; caret-color: transparent; padding: 10px">
+<!--      <fa-icon class="fa-grey" style="height: 32px" [icon]="xButtonIcon" size="2x"></fa-icon>-->
+      <div class="p-d-flex p-jc-end" style=" height: 50px; width: 100%">
+        <button pButton class="hamburger-btn p-button-text p-my-auto" label=" " style="background-color: white; border-color: transparent;align-self: baseline" (click)="closeNav()"><fa-icon class="fa-grey" size="2x" [icon]="xButtonIcon"></fa-icon></button>
+      </div>
+      <div class="p-col-12 title-text" style="border: none; font-weight: bold">
+        <ul style="list-style-type:none; margin: 0">
+          <li *ngFor="let item of menuItems; let i = index">
+            <div class="p-col-12 header-text" style="border: none">
+              <button pButton class="p-button-text" label=" " routerLink="{{item.routerLink}}" (click)="closeNav()">
+                <fa-icon class="fa-blue" [icon]="item.icon"></fa-icon>
+                <span #span style="color: #474747; font-weight: bold" *ngIf="item.label != 'Resume'" class="p-mx-2">{{item.label}}</span>
+                <a *ngIf="item.label == 'Resume'" href="/assets/Resume%20Summer%202020.pdf" target="_blank" style="text-decoration: none; color: #474747; font-weight: bold" class="p-mx-2 in-text-link">{{item.label}}</a>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="blur" class="blur" (click)="closeNav()">
 
     </div>
-  </div>
+<!--  </div>-->
 
   <p-menu #menu [popup]="true"  [model]="projectItems" (click)="navigate($event)"></p-menu>

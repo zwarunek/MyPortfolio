@@ -32,6 +32,7 @@ import { TimemachineComponent } from './projects/timemachine/timemachine.compone
 import { FordsearchengineComponent } from './projects/fordsearchengine/fordsearchengine.component';
 import { FooterComponent } from './footer/footer.component';
 import { FlappybirdComponent } from './projects/flappybird/flappybird.component';
+import {SlideMenuModule} from 'primeng/slidemenu';
 
 
 
@@ -69,7 +70,8 @@ import { FlappybirdComponent } from './projects/flappybird/flappybird.component'
     SharedModule,
     TabMenuModule,
     CaptchaModule,
-    CardModule
+    CardModule,
+    SlideMenuModule
   ],
   providers: [
     WebRequestService

@@ -2,7 +2,15 @@ import {Component, ElementRef, OnInit} from '@angular/core';
 import {TabMenu, TabMenuModule} from 'primeng/tabmenu';
 import {MenuItem} from 'primeng/api';
 import {Router, ActivatedRoute } from '@angular/router';
-import {faBriefcase, faFilm, faHome, faAngleDown, faHamburger, faBars} from '@fortawesome/free-solid-svg-icons';
+import {
+  faBriefcase,
+  faFilm,
+  faHome,
+  faAngleDown,
+  faHamburger,
+  faBars,
+  faCross, faTimes
+} from '@fortawesome/free-solid-svg-icons';
 import {faComments, faFilePdf} from '@fortawesome/free-regular-svg-icons';
 import {Menu} from 'primeng/menu';
 import * as $ from 'jquery/dist/jquery.min.js';
@@ -21,6 +29,7 @@ export class HeaderComponent implements OnInit {
   activeMenuItem: any;
   dropdownIcon: any = faAngleDown;
   mobileMenuIcon: any = faBars;
+  xButtonIcon: any = faTimes;
 
 
   ngOnInit(): void {
@@ -44,7 +53,17 @@ export class HeaderComponent implements OnInit {
     if (window.location.href.endsWith('contact')) {
       this.activeMenuItem = this.menuItems[3];
     }
-    // let element = document.getElementById('sideMenu')
+
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "81px";
+      } else {
+        document.getElementById("navbar").style.top = "15px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
   }
   ngAfterViewInit(){
     this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#bfbfbf';
@@ -77,12 +96,15 @@ export class HeaderComponent implements OnInit {
 
   openNav() {
     document.getElementById("sideMenu").classList.add("active");
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    document.getElementById("blur").classList.add("active");
   }
 
   /* Set the width of the side navigation to 0 */
   closeNav() {
     document.getElementById("sideMenu").classList.remove("active");
+    document.getElementById("blur").classList.remove("active");
   }
 
+  hideShowScroll(event: Event) {
+  }
 }

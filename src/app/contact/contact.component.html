@@ -9,12 +9,12 @@
   </ng-template>
 </p-dialog>
 <div class="p-mx-auto p-grid p-jc-center main-content">
-  <div class="p-md-5 p-sm-8 title-text" style="margin-bottom: 30px">
+  <div class="title-text" style="margin-bottom: 30px;">
     <span>Contact</span>
   </div>
   <form [formGroup]="FormData" (ngSubmit)="send(FormData.value)" class="p-fluid p-formgrid p-grid p-col-12 p-xl-8">
     <div class="p-field p-col-12 p-md-6">
-      <label for="firstname" class="small-text">
+      <label for="firstname" class="regular-text">
         <fa-icon class="fa-blue" [icon]="userIcon"></fa-icon>
         First Name
         <span style="color: red">*</span>
@@ -22,14 +22,14 @@
       <input id="firstname" formControlName="Firstname" type="text" pInputText/>
     </div>
     <div class="p-field p-col-12 p-md-6">
-      <label for="lastname" class="small-text">
+      <label for="lastname" class="regular-text">
         Last Name
         <span style="color: red">*</span>
       </label>
       <input id="lastname" formControlName="Lastname" type="text" pInputText/>
     </div>
     <div class="p-field p-col-12 p-md-6">
-      <label for="email" class="small-text">
+      <label for="email" class="regular-text">
         <fa-icon class="fa-blue" [icon]="mailIcon"></fa-icon>
         Email Address
         <span style="color: red">*</span>
@@ -37,23 +37,23 @@
       <input id="email" formControlName="Email" type="text" pInputText/>
     </div>
     <div class="p-field p-col-12 p-md-6">
-      <label for="number" class="small-text">
+      <label for="number" class="regular-text">
         <fa-icon class="fa-blue" [icon]="numberIcon"></fa-icon>
         Phone Number
       </label>
       <input id="number" formControlName="Number" type="text" pInputText/>
     </div>
     <div class="p-field p-col-12">
-      <label for="message" class="small-text">
+      <label for="message" class="regular-text">
         <fa-icon class="fa-blue" [icon]="messageIcon"></fa-icon>
         Message
         <span style="color: red">*</span>
       </label>
       <textarea id="message" formControlName="Message" type="text" rows="3" autoResize="true" pInputTextarea></textarea>
     </div>
-    <div class="p-field p-col-12 p-d-flex p-jc-end" style="align-items: end">
-      <p-captcha siteKey="6Lcgw94ZAAAAAIX8T_k9GVnl2woB0AkGl538GxB8" (onResponse)="reCAPTCHAPassed = true" (onExpire)="reCAPTCHAPassed=false" class="p-mr-1"></p-captcha>
-      <button pButton pRipple type="submit" label="Send" style="width: 100px" [disabled]="!FormData.valid || !reCAPTCHAPassed">
+    <div class="p-col-12 p-grid p-d-flex p-jc-end" style="align-items: end; padding: 0">
+      <p-captcha siteKey="6Lcgw94ZAAAAAIX8T_k9GVnl2woB0AkGl538GxB8" (onResponse)="reCAPTCHAPassed = true" class="p-mb-2" (onExpire)="reCAPTCHAPassed=false"></p-captcha>
+      <button pButton pRipple type="submit" label="Send" style="width: 100px; color: white" class="p-ml-2"  [disabled]="!FormData.valid || !reCAPTCHAPassed">
         <fa-icon class="p-mr-2" [icon]="sendIcon" style="color: #ffffff;"></fa-icon>
       </button>
     </div>
