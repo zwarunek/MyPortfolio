@@ -24,11 +24,6 @@ html,body{
     border-color: gray;
   }
 }
-.in-text-link {
-  color: #474747;
-  cursor: pointer;
-  text-decoration: underline;
-}
 .project-card {
   cursor: pointer;
   border-bottom-left-radius: 20px;
@@ -141,6 +136,11 @@ html,body{
   background-color: white;
   padding: 10px;
   z-index: 2;
+}
+.link{
+  color: #474747;
+  cursor: pointer;
+  text-decoration: none;
 }
 .sticky-header {
   position: fixed;

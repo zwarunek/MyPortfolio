@@ -9,7 +9,9 @@ import {
   faAngleDown,
   faHamburger,
   faBars,
-  faCross, faTimes
+  faCross,
+  faTimes,
+  faUsers
 } from '@fortawesome/free-solid-svg-icons';
 import {faComments, faFilePdf} from '@fortawesome/free-regular-svg-icons';
 import {Menu} from 'primeng/menu';
@@ -35,8 +37,9 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.menuItems = [
       {label: 'Home', icon: faHome, routerLink: ['']},
-      {label: 'Projects', icon: faBriefcase, items: [{label: 'Time Machine'}], routerLink: ['projects']},
-      {label: 'Resume', icon: faFilePdf},
+      {label: 'Projects', icon: faBriefcase, routerLink: ['projects']},
+      {label: 'Employment', icon: faUsers, routerLink: ['employment']},
+      {label: 'Resume', icon: faFilePdf, url: '/assets/Resume%20Summer%202020.pdf', target: "_blank"},
       {label: 'Contact', icon: faComments, routerLink: ['contact']}
     ];
     this.projectItems = [
@@ -73,7 +76,7 @@ export class HeaderComponent implements OnInit {
     menu.hide();
     for (let i = 0; i < this.menuItems.length; i++){
       if (span.innerText == this.menuItems[i].label && this.menuItems[i].items != null){
-        menu.show($event);
+        menu.toggle($event);
         break;
       }
     }
@@ -83,7 +86,7 @@ export class HeaderComponent implements OnInit {
 
     for (let i = 0; i < this.menuItems.length; i++){
       if (span.innerText == this.menuItems[i].label && this.menuItems[i].items != null){
-        menu.hide();
+        menu.toggle($event);
         break;
       }
     }

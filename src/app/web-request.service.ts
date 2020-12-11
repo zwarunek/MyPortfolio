@@ -6,11 +6,7 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 })
 export class WebRequestService {
 
-  readonly ROOT_URL;
-
-  constructor(private http: HttpClient) {
-    this.ROOT_URL = 'http://api.zacharywarunek.com'
-  }
+  constructor(private http: HttpClient) {}
 
   get(uri: string) {
     return this.http.get(uri);

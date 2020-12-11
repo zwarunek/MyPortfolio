@@ -1,7 +1,52 @@
 
 <div class="main-content">
-  <p>PAGE UNDER CONSTRUCTION</p>
-  <div class="main-content p-jc-center">
-    <img src="https://bstats.org/signatures/bukkit/TimeMachine.svg" alt="https://bstats.org/signatures/bukkit/TimeMachine.svg" style="max-width: 100%">
+  <div class="title-text p-mx-auto p-grid p-jc-center" style="margin-bottom: 20px">
+    <span>Time Machine</span>
   </div>
+  <div class="regular-text p-mx-auto p-grid p-jc-start">
+    <div class="p-col-12">
+      <span STYLE="font-weight: bold">Goal: </span>
+      <span>Create a useful, easy to use server backup solution</span>
+    </div>
+    <div class="p-col-12">
+      <span STYLE="font-weight: bold">Technologies used: </span>
+      <span>Java</span>
+    </div>
+    <div class="p-col-12">
+      <span STYLE="font-weight: bold">When: </span>
+      <span>Aug 2020 - Present</span>
+    </div>
+    <div class="p-col-12">
+      <span STYLE="font-weight: bold">Helpful Links: </span>
+      <a class="link" style="text-decoration: underline" href="https://github.com/zwarunek/TimeMachine">GitHub</a>,
+      <a class="link" style="text-decoration: underline" href="https://bstats.org/plugin/bukkit/TimeMachine/8860">bStats</a>,
+      <a class="link" style="text-decoration: underline" href="https://www.spigotmc.org/resources/time-machine-nbt-based-player-world-and-chunk-restoring.83621/">SpigotMC</a>,
+      <a class="link" style="text-decoration: underline" href="https://dev.bukkit.org/projects/time-machine">Bukkit</a>
+    </div>
+    <br>
+    <div class="title-text p-col-12" style="border: none; width: fit-content">
+      <span>Overview</span>
+    </div>
+    <div class="p-col-12 regular-text">
+      <span>
+        Time Machine is a project that I have recently started. This is a Minecraft plugin that is used mainly by server
+        administrators to backup and restore worlds and players on their server. To my knowledge, this is the only plugin
+        that gives server admins the ability to pick individual Minecraft chunks that they want to either backup or
+        restore. This is accomplished by using Minecraft’s NBT file which they use to store player and world data.
+      </span>
+    </div>
+    <div class="p-col-12 regular-text">
+      <span>
+        I think that the best takeaway from this project is learning code maintainability and working on something that
+        will need to evolve as the game of minecraft evolves. Other key takeaways are taking feedback from actual users
+        of it and making sure that every update that I make doesnt ruin someones server on accident.
+      </span>
+    </div>
+    <div class="p-col-12 regular-text">
+      <span>
+        Below is a graph that shows daily average users for the amount fo servers that are currently running with Time Machine installed for the last 60 days.
+      </span>
+    </div>
+  </div>
+  <p-chart *ngIf="loading == false" type="line" [data]="chartInfo" [options]="options"  style="z-index: 0"></p-chart>
 </div>

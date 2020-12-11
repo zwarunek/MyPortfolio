@@ -33,7 +33,8 @@ import { FordsearchengineComponent } from './projects/fordsearchengine/fordsearc
 import { FooterComponent } from './footer/footer.component';
 import { FlappybirdComponent } from './projects/flappybird/flappybird.component';
 import {SlideMenuModule} from 'primeng/slidemenu';
-
+import {ChartModule} from "primeng/chart";
+import { EmploymentComponent } from './employment/employment.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import {SlideMenuModule} from 'primeng/slidemenu';
     TimemachineComponent,
     FordsearchengineComponent,
     FooterComponent,
-    FlappybirdComponent
+    FlappybirdComponent,
+    EmploymentComponent
   ],
   imports: [
     BrowserModule,
@@ -71,7 +73,8 @@ import {SlideMenuModule} from 'primeng/slidemenu';
     TabMenuModule,
     CaptchaModule,
     CardModule,
-    SlideMenuModule
+    SlideMenuModule,
+    ChartModule
   ],
   providers: [
     WebRequestService

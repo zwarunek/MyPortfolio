@@ -4,15 +4,14 @@
 <!--      <fa-icon class="mobile-menu-icon fa-blue" size="2x" (click)="openNav()" [icon]="mobileMenuIcon"></fa-icon>-->
         <button pButton class="hamburger-btn p-button-text p-my-auto" label=" " style="background-color: white; border-color: transparent;align-self: baseline" (click)="openNav()"><fa-icon class="mobile-menu-icon fa-blue" size="2x" [icon]="mobileMenuIcon"></fa-icon></button>
 
-      <span  class="header-text p-mx-auto" routerLink="/">Zachary Warunek</span>
+      <span  class="header-text p-mx-auto" routerLink="/" (click)="tabMenu.activeItem = menuItems[0]">Zachary Warunek</span>
     </div>
     <div id="navbar" class="navbar" style="z-index: 1">
       <p-tabMenu class="menu-bar" #tabMenu [model]="menuItems" [activeItem]="activeMenuItem">
         <ng-template pTemplate="item" let-item>
           <fa-icon class="fa-blue" [icon]="item.icon"></fa-icon>
-          <span #span (mouseenter)="entered($event, span, menu)" *ngIf="item.label != 'Resume'" class="p-mx-2">{{item.label}}</span>
-          <a *ngIf="item.label == 'Resume'" href="/assets/Resume%20Summer%202020.pdf" target="_blank" style="color: #6c757d" class="p-mx-2 in-text-link">{{item.label}}</a>
-          <fa-icon class="p-menuitem-icon" *ngIf="item.items != null" [icon]="dropdownIcon"></fa-icon>
+          <span class="p-mx-2">{{item.label}}</span>
+<!--          <a *ngIf="item.label == 'Resume'" href="/assets/Resume%20Summer%202020.pdf" target="_blank" style="color: #6c757d; cursor: pointer; text-decoration: none" class="p-mx-2" >{{item.label}}</a>-->
         </ng-template>
       </p-tabMenu>
     </div>
@@ -27,8 +26,7 @@
             <div class="p-col-12 header-text" style="border: none">
               <button pButton class="p-button-text" label=" " routerLink="{{item.routerLink}}" (click)="closeNav()">
                 <fa-icon class="fa-blue" [icon]="item.icon"></fa-icon>
-                <span #span style="color: #474747; font-weight: bold" *ngIf="item.label != 'Resume'" class="p-mx-2">{{item.label}}</span>
-                <a *ngIf="item.label == 'Resume'" href="/assets/Resume%20Summer%202020.pdf" target="_blank" style="text-decoration: none; color: #474747; font-weight: bold" class="p-mx-2 in-text-link">{{item.label}}</a>
+                <span style="color: #474747; font-weight: bold" class="p-mx-2">{{item.label}}</span>
               </button>
             </div>
           </li>
