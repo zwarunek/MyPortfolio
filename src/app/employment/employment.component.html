@@ -2,21 +2,31 @@
   <div class="title-text p-mx-auto p-grid p-jc-center" style="margin-bottom: 20px">
     <span>Employment</span>
   </div>
-    <div class="regular-text p-mx-auto p-grid p-jc-start">
-<!--      <p-timeline [value]="employmentTimeline" align="alternate" styleClass="customized-timeline">-->
-<!--        <ng-template pTemplate="marker" let-event>-->
-<!--            <span class="custom-marker p-shadow-2" [style.backgroundColor]="event.color">-->
-<!--                <i [ngClass]="event.icon"></i>-->
-<!--            </span>-->
-<!--        </ng-template>-->
-<!--        <ng-template pTemplate="content" let-event>-->
-<!--          <p-card [header]="event.status" [subheader]="event.date">-->
-<!--            <img *ngIf="event.image" [src]="'assets/showcase/images/demo/product/' + event.image" [alt]="event.name" width="200" class="p-shadow-2" />-->
-<!--            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt-->
-<!--              quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>-->
-<!--            <button pButton label="Read more" class="p-button-text"></button>-->
-<!--          </p-card>-->
-<!--        </ng-template>-->
-<!--      </p-timeline>-->
+  <div class="small-text p-col-10" style="padding-top: 20px">
+    <p-timeline [value]="employmentTimeline" class="p-col-10" [align]="'left'">
+      <ng-template pTemplate="content" let-event>
+        <div class="p-col-12 p-grid p-jc-start">
+          <span style="font-weight: bold">Position:</span>&nbsp;
+          <span style="font-weight: normal"> {{event.position}}</span>
+
+        </div>
+        <div class="p-col-12 p-grid p-jc-start">
+          <span style="font-weight: bold">Date:</span>&nbsp;
+          <span style="font-weight: normal"> {{event.date}}</span>
+
+        </div>
+        <div class="p-col-12 p-grid p-jc-start">
+          <span style="font-weight: bold">Info:</span>&nbsp;
+          <span style="font-weight: normal"> {{event.info}}</span>
+          <br>
+          <br>
+        </div>
+      </ng-template>
+      <ng-template pTemplate="opposite" let-event>
+        <div>
+          <img src="{{event.img}}" width="150">
+        </div>
+      </ng-template>
+    </p-timeline>
   </div>
 </div>

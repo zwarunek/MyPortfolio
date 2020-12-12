@@ -26,7 +26,10 @@ export class TimemachineComponent implements OnInit {
           label: 'Servers',
           data: this.pluginData,
           fill: false,
-          borderColor: '#007bff'
+          borderColor: '#007bff',
+          lineTension: 0,
+          pointRadius: 2,
+          pointHoverRadius: 3
         }
       ]
     }
@@ -39,6 +42,9 @@ export class TimemachineComponent implements OnInit {
       },
       legend: {
         display: false
+      },
+      line: {
+        lineTension: 0
       }
     };
   }
@@ -46,17 +52,17 @@ export class TimemachineComponent implements OnInit {
   getPluginStats(){
     this.loading = true;
     let average = 0;
-    let maxData = 2880;
+    let maxData = 4800;
     this.api.get('https://bstats.org/api/v1/plugins/8860/charts/servers/data/?maxElements=' + maxData).subscribe((result: any[]) => {
       for(let i = 0; i<result.length; i++){
         let date = new Date(result[i][0]);
         average += result[i][1];
-        if(i%(maxData/30) == 0) {
-          if(i%((maxData/30)*2) == 0)
-            this.pluginTime.push(date.getMonth() + '/' + date.getDate().toString() + '/' + date.getFullYear())
+        if(i%(maxData/(24*2)) == 0) {
+          if(i%((maxData/(24*2))) == 0)
+            this.pluginTime.push((date.getMonth()+1) + '/' + date.getDate().toString() + '/' + date.getFullYear())
           else
             this.pluginTime.push('')
-          this.pluginData.push(Math.round(average/(maxData/30)))
+          this.pluginData.push(Math.round(average/(maxData/(24*2))))
           average = 0;
         }
       }

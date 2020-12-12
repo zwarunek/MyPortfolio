@@ -12,10 +12,12 @@ export class EmploymentComponent implements OnInit {
 
   ngOnInit(): void {
     this.employmentTimeline = [
-      {status: 'Ordered', date: '15/10/2020 10:30',  color: '#9C27B0'},
-      {status: 'Processing', date: '15/10/2020 14:00',  color: '#673AB7'},
-      {status: 'Shipped', date: '15/10/2020 16:15',  color: '#FF9800'},
-      {status: 'Delivered', date: '16/10/2020 10:00', color: '#607D8B'}
+      {employer: 'Ford', date: '03/30/2019 - Present',  color: '#9C27B0', img: '/assets/images/employers/Ford-logo.jpg', position: "Full Stack Engineer Intern",
+        info: 'asldfi jhas dpoifih jasdpi ofhj dpiouo fhaspdi ouifhsaio ufdh siadufh lkisadjih fkjsadhflkjsahflkjuh saifluh sajkfdj sadfkjhgsajhfd jasdfjuhsadbfkjh sadlkfj ijkhsadf'},
+      {employer: 'Ford', date: '09/30/2019 - 12/20/2019',  color: '#673AB7', img: '/assets/images/employers/Ford-logo.jpg', position: "Software Developer Intern",
+        info: 'asldfijh as poifih jasdpiofhja sdpiouo fhas diouifhsa iou fdh siadufh lkisadjih fkjsadhflkjsahflkjuh saifluh sajkfdj sadfkjhgsajhfd jasdfjuhsadbfkjh sadlkfj ijkhsadf'},
+      {employer: 'Ruhlig Farms & Gardens', date: '15/10/2020 16:15',  color: '#FF9800', img: '/assets/images/employers/Ruhligs-logo.png', position: "Cashier",
+        info: 'asldfi jhasdpo ifihja sdpiof hjasdpio ofhas pdiouif hsaioufdh siadufh lkisadjih fkjsadhflkjsahflkjuh saifluh sajkfdj sadfkjhgsajhfd jasdfjuhsadbfkjh sadlkfj ijkhsadf'}
     ];
   }
 

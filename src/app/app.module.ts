@@ -35,6 +35,8 @@ import { FlappybirdComponent } from './projects/flappybird/flappybird.component'
 import {SlideMenuModule} from 'primeng/slidemenu';
 import {ChartModule} from "primeng/chart";
 import { EmploymentComponent } from './employment/employment.component';
+import {TimelineModule} from "primeng/timeline";
+
 
 
 @NgModule({
@@ -74,7 +76,8 @@ import { EmploymentComponent } from './employment/employment.component';
     CaptchaModule,
     CardModule,
     SlideMenuModule,
-    ChartModule
+    ChartModule,
+    TimelineModule
   ],
   providers: [
     WebRequestService
