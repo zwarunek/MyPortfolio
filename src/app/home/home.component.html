@@ -1,5 +1,6 @@
 <div class="top-image-container">
-  <img src="assets/images/ketteringIMG.webp" alt="" class="top-image">
+  <img *ngIf="!resizeBackgroundImg()" src="assets/images/ketteringIMG.webp" alt="" class="top-image">
+  <img *ngIf="resizeBackgroundImg()" src="assets/images/ketteringIMG.webp" [width]="screenWidth * .666667" alt="" class="top-image">
 </div>
 <div class="p-mx-auto p-grid p-jc-center main-content" style="margin: 0!important;">
   <div class="title-text">

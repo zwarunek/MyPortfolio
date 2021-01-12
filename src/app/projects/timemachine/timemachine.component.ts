@@ -52,7 +52,7 @@ export class TimemachineComponent implements OnInit {
   getPluginStats(){
     this.loading = true;
     let average = 0;
-    let maxData = 4800;
+    let maxData = Math.floor((new Date().getTime() - new Date("10/12/2020").getTime())/(1000 * 3600 * 24)) * 2 * 24;
     this.api.get('https://bstats.org/api/v1/plugins/8860/charts/servers/data/?maxElements=' + maxData).subscribe((result: any[]) => {
       for(let i = 0; i<result.length; i++){
         let date = new Date(result[i][0]);

@@ -39,7 +39,7 @@ export class HeaderComponent implements OnInit {
       {label: 'Home', icon: faHome, routerLink: ['']},
       {label: 'Projects', icon: faBriefcase, routerLink: ['projects']},
       {label: 'Employment', icon: faUsers, routerLink: ['employment']},
-      {label: 'Resume', icon: faFilePdf, url: '/assets/Resume%20Summer%202020.pdf', target: "_blank"},
+      {label: 'Resume', icon: faFilePdf, url: '/assets/Resume.pdf', target: "_blank"},
       {label: 'Contact', icon: faComments, routerLink: ['contact']}
     ];
     this.projectItems = [
@@ -63,7 +63,7 @@ export class HeaderComponent implements OnInit {
       if (prevScrollpos > currentScrollPos) {
         document.getElementById("navbar").style.top = "81px";
       } else {
-        document.getElementById("navbar").style.top = "15px";
+        document.getElementById("navbar").style.top = "-20px";
       }
       prevScrollpos = currentScrollPos;
     }

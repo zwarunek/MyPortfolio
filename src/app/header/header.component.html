@@ -6,21 +6,23 @@
 
       <span  class="header-text p-mx-auto" routerLink="/" (click)="tabMenu.activeItem = menuItems[0]">Zachary Warunek</span>
     </div>
-    <div id="navbar" class="navbar" style="z-index: 1">
-      <p-tabMenu class="menu-bar" #tabMenu [model]="menuItems" [activeItem]="activeMenuItem">
-        <ng-template pTemplate="item" let-item>
-          <fa-icon class="fa-blue" [icon]="item.icon"></fa-icon>
-          <span class="p-mx-2">{{item.label}}</span>
-<!--          <a *ngIf="item.label == 'Resume'" href="/assets/Resume%20Summer%202020.pdf" target="_blank" style="color: #6c757d; cursor: pointer; text-decoration: none" class="p-mx-2" >{{item.label}}</a>-->
-        </ng-template>
-      </p-tabMenu>
+    <div id="navbar" class="navbar" style="z-index: 1" >
+      <div style="width: fit-content" class="p-m-auto">
+        <p-tabMenu class="menu-bar" #tabMenu [model]="menuItems" [activeItem]="activeMenuItem">
+          <ng-template pTemplate="item" let-item>
+            <fa-icon class="fa-blue" [icon]="item.icon"></fa-icon>
+            <span class="p-mx-2">{{item.label}}</span>
+            <!--          <a *ngIf="item.label == 'Resume'" href="/assets/Resume%20Summer%202020.pdf" target="_blank" style="color: #6c757d; cursor: pointer; text-decoration: none" class="p-mx-2" >{{item.label}}</a>-->
+          </ng-template>
+        </p-tabMenu>
+      </div>
     </div>
-    <div id="sideMenu" #sideMenu class="side-menu"  style="position: fixed; top: 0; left: 0;width: 250px; height: 100%; background-color: white; caret-color: transparent; padding: 10px">
+    <div id="sideMenu" #sideMenu class="side-menu"  style="position: fixed; top: 0; left: 0;width: 250px; height: 100%; background-color: white; caret-color: transparent; padding: 10px; z-index: 5">
 <!--      <fa-icon class="fa-grey" style="height: 32px" [icon]="xButtonIcon" size="2x"></fa-icon>-->
       <div class="p-d-flex p-jc-end" style=" height: 50px; width: 100%">
         <button pButton class="hamburger-btn p-button-text p-my-auto" label=" " style="background-color: white; border-color: transparent;align-self: baseline" (click)="closeNav()"><fa-icon class="fa-grey" size="2x" [icon]="xButtonIcon"></fa-icon></button>
       </div>
-      <div class="p-col-12 title-text" style="border: none; font-weight: bold">
+      <div class="p-col-12 title-text side-menu-div" style="border: none; font-weight: bold">
         <ul style="list-style-type:none; margin: 0">
           <li *ngFor="let item of menuItems; let i = index">
             <div class="p-col-12 header-text" style="border: none">

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {TabMenuModule} from 'primeng/tabmenu';
 import {MenuItem} from "primeng/api";
 
@@ -9,8 +9,25 @@ import {MenuItem} from "primeng/api";
 })
 export class HomeComponent implements OnInit {
 
+  screenHeight: number;
+  screenWidth: number;
+
+  constructor() {
+    this.getScreenSize();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  getScreenSize(event?) {
+    this.screenHeight = window.innerHeight;
+    this.screenWidth = window.innerWidth;
+    console.log(this.screenHeight, this.screenWidth);
+  }
+
   ngOnInit(): void {
   }
 
+  resizeBackgroundImg(): boolean{
+    return this.screenWidth * .666667 > 1200 && this.screenWidth > 1500
+  }
 
 }

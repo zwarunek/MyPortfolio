@@ -28,11 +28,33 @@
       <span>
         This is a clone of flappy bird and my first try at game development from scratch. I originally created this
         flappy bird for a communications class in my second semester are college. The class project was about unfamiliar
-        genres, hence my first try atmaking a game. The game is written in Java and the engine is one that I created as
-        well. After the class, Iwas still interested in taking it a bit further, so I hooked a machine-learning
-        algorithm to it so it couldplay for me. The ML algorithm I went with was NEAT as it seemed like a reasonable
-        place to start with machinelearning and AI.
+        genres, hence my first try at making a game. The game is written in Java and the engine is one that I created as
+        well. After the class, It was still interested in taking it a bit further, so I hooked a machine-learning
+        algorithm to it so it could play for me. The ML algorithm I went with was NEAT as it seemed like a reasonable
+        place to start with machine learning and AI.
       </span>
+      <br>
+      <br>
+      <span>This is the neural net training itself. Since it is a very simple game with not many inputs, it figures it
+      out pretty easily. The colors of the birds are its species. it starts with 50 of the same species then slowly
+      they evolve from itself or they form more species. you can easily see what species is the most fit and evolves
+      quicker than the others. There is also a visual representation of the neural net of the farthest bird in
+        each generation, with positive and negative weight being represented by red and blue, and the weight being
+        the opacity of the line. For the fitness function, I found tested a few but settled on lifespan/10 - 1.5*amountOfFlaps
+      </span>
+      <br>
+      <video width="320" height="240" controls>
+        <source src="/assets/images/projects/flappybirdtraining.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <br>
+      <br>
+      <span>This next video shows how easily a computer can play this game. It gets to 100,000 with almost no effort. The game is extremely sped up for this.</span>
+      <br>
+      <video width="320" height="240" controls>
+        <source src="/assets/images/projects/flappybirdto100k.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
   </div>
 </div>
