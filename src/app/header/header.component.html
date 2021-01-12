@@ -26,9 +26,10 @@
         <ul style="list-style-type:none; margin: 0">
           <li *ngFor="let item of menuItems; let i = index">
             <div class="p-col-12 header-text" style="border: none">
-              <button pButton class="p-button-text" label=" " routerLink="{{item.routerLink}}" (click)="closeNav()">
+              <button pButton class="p-button-text" label=" " (click)="closeNav()">
                 <fa-icon class="fa-blue" [icon]="item.icon"></fa-icon>
-                <span style="color: #474747; font-weight: bold" class="p-mx-2">{{item.label}}</span>
+                <a *ngIf="item.routerLink != null" style="color: #474747; font-weight: bold; text-decoration: none" href="{{item.routerLink}}" class="p-mx-2">{{item.label}}</a>
+                <a *ngIf="item.url != null" style="color: #474747; font-weight: bold; text-decoration: none" class="p-mx-2" href="{{item.url}}">{{item.label}}</a>
               </button>
             </div>
           </li>
