@@ -14,11 +14,21 @@ export class EmploymentComponent implements OnInit {
     this.employmentTimeline = [
       {
         employer: 'Ford Motor Company',
-        date: '03/30/2020 - Present',
+        date: '03/30/2021 - Present',
+        img: '/assets/images/employers/Ford-logo.jpg',
+        position: "ADAS Algorithm Engineer",
+        type: 'Co-op',
+        info: 'Used tensorflow and python to develop and train computer vision models with large datasets. I reviewed ' +
+          'and created documentation for ADAS software. I annotated and prepared large datasets for training. I ' +
+          'learned how to apply machine learning algorithms in a professional setting. '
+      },
+      {
+        employer: 'Ford Motor Company',
+        date: '03/30/2020 - 12/23/2020',
         img: '/assets/images/employers/Ford-logo.jpg',
         position: "Full Stack Engineer",
-        type: 'Internship',
-        info: 'I am working on an internal website for employees to see and change various things on vehicles. The ' +
+        type: 'Co-op',
+        info: 'I worked on an internal website for employees to see and change various settings on vehicles. The ' +
           'website is written in AngularJS with a Java backend. I have gained very useful skills working here ' +
           'including source control, code reviews, working with SQL databases, and creating and consuming REST APIs.'
       },
@@ -26,7 +36,7 @@ export class EmploymentComponent implements OnInit {
         date: '09/30/2019 - 12/20/2019',
         img: '/assets/images/employers/Ford-logo.jpg',
         position: "Software Developer",
-        type: 'Internship',
+        type: 'Co-op',
         info: 'I supported data scientists with interpreting vehicle data and helped to streamline the data ' +
           'collection process. I also developed a search engine to parse the data coming off of the vehicles. ' +
           'This was an area that I saw employees struggling in and wanted to create an easy way for them to look ' +

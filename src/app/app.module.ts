@@ -36,6 +36,7 @@ import {SlideMenuModule} from 'primeng/slidemenu';
 import {ChartModule} from "primeng/chart";
 import { EmploymentComponent } from './employment/employment.component';
 import {TimelineModule} from "primeng/timeline";
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 
@@ -50,7 +51,8 @@ import {TimelineModule} from "primeng/timeline";
     FordsearchengineComponent,
     FooterComponent,
     FlappybirdComponent,
-    EmploymentComponent
+    EmploymentComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
