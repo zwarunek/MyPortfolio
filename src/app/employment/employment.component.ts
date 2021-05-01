@@ -28,7 +28,7 @@ export class EmploymentComponent implements OnInit {
         img: '/assets/images/employers/Ford-logo.jpg',
         position: "ADAS Algorithm Engineer",
         type: 'Co-op',
-        info: 'Used tensorflow and python to develop and train computer vision models with large datasets. I reviewed ' +
+        info: 'Used Tensorflow and Python to develop and train computer vision models with large datasets. I reviewed ' +
           'and created documentation for ADAS software. I annotated and prepared large datasets for training. I ' +
           'learned how to apply machine learning algorithms in a professional setting. '
       },
