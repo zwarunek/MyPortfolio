@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, NgZone, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-employment',
@@ -6,11 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./employment.component.css']
 })
 export class EmploymentComponent implements OnInit {
+  mobile
 
-  constructor() { }
+  constructor(private ngZone:NgZone) {
+    window.onresize = (e) =>
+    {
+      //ngZone.run will help to run change detection
+      this.ngZone.run(() => {
+        this.mobile = window.innerWidth <= 720;
+      });
+    };
+  }
   employmentTimeline: any[];
 
   ngOnInit(): void {
+    this.mobile = window.innerWidth <= 720;
     this.employmentTimeline = [
       {
         employer: 'Ford Motor Company',
@@ -53,5 +63,6 @@ export class EmploymentComponent implements OnInit {
       }
     ];
   }
+
 
 }
