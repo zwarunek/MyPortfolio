@@ -37,6 +37,7 @@ import {ChartModule} from "primeng/chart";
 import { EmploymentComponent } from './employment/employment.component';
 import {TimelineModule} from "primeng/timeline";
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PathfindervisualizerComponent } from './projects/pathfindervisualizer/pathfindervisualizer.component';
 
 
 
@@ -52,7 +53,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     FooterComponent,
     FlappybirdComponent,
     EmploymentComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    PathfindervisualizerComponent
   ],
   imports: [
     BrowserModule,

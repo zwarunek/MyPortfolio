@@ -8,6 +8,7 @@ import {FordsearchengineComponent} from './projects/fordsearchengine/fordsearche
 import {FlappybirdComponent} from './projects/flappybird/flappybird.component';
 import {EmploymentComponent} from "./employment/employment.component";
 import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
+import {PathfindervisualizerComponent} from "./projects/pathfindervisualizer/pathfindervisualizer.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'projects/timemachine', component: TimemachineComponent},
   {path: 'projects/fordsearchengine', component: FordsearchengineComponent},
   {path: 'projects/flappybirdai', component: FlappybirdComponent},
+  {path: 'projects/pathfinding', component: PathfindervisualizerComponent},
   {path: 'employment', component: EmploymentComponent},
   {path: '**', component: PageNotFoundComponent}
 ];

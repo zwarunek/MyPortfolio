@@ -1,6 +1,5 @@
-import {Component, HostListener, ViewEncapsulation} from '@angular/core';
-import {ActivatedRoute, Router} from "@angular/router";
-import {MenuItem} from "primeng/api";
+import {Component, ViewEncapsulation} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -17,9 +16,5 @@ export class AppComponent {
 
   }
 
-  @HostListener("window:scroll", [])
-  onWindowScroll() {
-    // this.currentSectionName = this.getCurrentSectionName();
-  }
 }
 
