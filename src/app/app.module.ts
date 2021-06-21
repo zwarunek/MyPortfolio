@@ -38,6 +38,7 @@ import { EmploymentComponent } from './employment/employment.component';
 import {TimelineModule} from "primeng/timeline";
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PathfindervisualizerComponent } from './projects/pathfindervisualizer/pathfindervisualizer.component';
+import {SEOService} from "./seoservice.service";
 
 
 
@@ -84,7 +85,8 @@ import { PathfindervisualizerComponent } from './projects/pathfindervisualizer/p
     TimelineModule
   ],
   providers: [
-    WebRequestService
+    WebRequestService,
+    SEOService
   ],
   bootstrap: [AppComponent]
 })
