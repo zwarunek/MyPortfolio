@@ -39,6 +39,7 @@ import {TimelineModule} from "primeng/timeline";
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PathfindervisualizerComponent } from './projects/pathfindervisualizer/pathfindervisualizer.component';
 import {SEOService} from "./seoservice.service";
+import { PortfolioComponent } from './projects/portfolio/portfolio.component';
 
 
 
@@ -55,7 +56,8 @@ import {SEOService} from "./seoservice.service";
     FlappybirdComponent,
     EmploymentComponent,
     PageNotFoundComponent,
-    PathfindervisualizerComponent
+    PathfindervisualizerComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,

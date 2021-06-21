@@ -9,6 +9,7 @@ import {FlappybirdComponent} from './projects/flappybird/flappybird.component';
 import {EmploymentComponent} from "./employment/employment.component";
 import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
 import {PathfindervisualizerComponent} from "./projects/pathfindervisualizer/pathfindervisualizer.component";
+import {PortfolioComponent} from "./projects/portfolio/portfolio.component";
 
 const routes: Routes = [
   {
@@ -92,6 +93,17 @@ const routes: Routes = [
       keywords: 'Zach, Zachary, Zach Warunek, Zachary Warunek, Warunek, zachwarunek, zacharywarunek, zwarunek, computer,' +
         ' science, computer science, kettering university, software engineering, portfolio, path, pathfinder, ' +
         'pathfinding, algorithm, visualize, visualizer, visualizing, pathfindingvisualizer.net'
+    }
+  },
+  {
+    path: 'projects/portfolio',
+    component: PortfolioComponent,
+    data: {
+      title: 'Zachary Warunek - Portfolio Website Project',
+      description: 'See the Portfolio Website project built by Zachary Warunek',
+      ogUrl: 'https://zacharywarunek.com/projects/portfolio/',
+      keywords: 'Zach, Zachary, Zach Warunek, Zachary Warunek, Warunek, zachwarunek, zacharywarunek, zwarunek, computer,' +
+        ' science, computer science, kettering university, software engineering, portfolio, project, projects'
     }
   },
   {
