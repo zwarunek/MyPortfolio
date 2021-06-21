@@ -20,4 +20,12 @@ export class SEOService {
   updateDescription(desc: string) {
     this.meta.updateTag({ name: 'description', content: desc })
   }
+
+  update(title: string, desc: string, url: string, keywords: string) {
+    this.title.setTitle(title);
+    this.meta.updateTag({ name: 'description', content: title + ' - ' + desc })
+    this.meta.updateTag({ name: 'og:url', content: url })
+    this.meta.updateTag({ name: 'keywords', content: keywords })
+
+  }
 }
