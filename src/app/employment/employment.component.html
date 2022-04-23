@@ -6,22 +6,22 @@
     <p-timeline [value]="employmentTimeline"><!--align="alternate"-->>
       <ng-template pTemplate="content" let-event>
         <p-card [header]="event.employer">
-          <div class="p-col-12 p-grid p-jc-start">
+          <div class="p-col-12 p-grid p-jc-start" *ngIf="event.position !== ''">
             <span style="font-weight: bold">Position:</span>&nbsp;
             <span style="font-weight: normal"> {{event.position}}</span>
 
           </div>
-          <div class="p-col-12 p-grid p-jc-start">
+          <div class="p-col-12 p-grid p-jc-start" *ngIf="event.date !== ''">
             <span style="font-weight: bold">Date:</span>&nbsp;
             <span style="font-weight: normal"> {{event.date}}</span>
 
           </div>
-          <div class="p-col-12 p-grid p-jc-start">
+          <div class="p-col-12 p-grid p-jc-start" *ngIf="event.type !== ''">
             <span style="font-weight: bold">Type:</span>&nbsp;
             <span style="font-weight: normal"> {{event.type}}</span>
 
           </div>
-          <div class="p-col-12 p-grid p-jc-start">
+          <div class="p-col-12 p-grid p-jc-start" *ngIf="event.info !== ''">
             <span style="font-weight: bold">Info:</span>&nbsp;
             <span style="font-weight: normal"> {{event.info}}</span>
           </div>

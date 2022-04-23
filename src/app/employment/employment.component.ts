@@ -23,14 +23,22 @@ export class EmploymentComponent implements OnInit {
     this.mobile = window.innerWidth <= 720;
     this.employmentTimeline = [
       {
+        employer: 'Amazon',
+        date: '06/27/2022 - 09/16/2022',
+        img: '/assets/images/employers/Amazon-logo.png',
+        position: "Incoming SDE Intern",
+        type: '',
+        info: ''
+      },
+      {
         employer: 'Ford Motor Company',
         date: '03/30/2021 - Present',
         img: '/assets/images/employers/Ford-logo.jpg',
-        position: "ADAS Algorithm Engineer",
+        position: "ADAS Software Engineer",
         type: 'Co-op',
-        info: 'Used Tensorflow and Python to develop and train computer vision models with large datasets. I reviewed ' +
-          'and created documentation for ADAS software. I annotated and prepared large datasets for training. I ' +
-          'learned how to apply machine learning algorithms in a professional setting. '
+        info: ' Built a tool to annotate large amounts of video data for training. Developed a root cause analysis tool' +
+          ' to parse logs generated from NN testing to more efficiently analyze NN performance. Reviewed and created ' +
+          'documentation for ADAS software. Annotated and prepared large datasets for training.'
       },
       {
         employer: 'Ford Motor Company',
